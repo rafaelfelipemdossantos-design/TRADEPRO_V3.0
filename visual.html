@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>TRADEPRO 3.0 - Identidade Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.4)); }
+            50% { filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.8)); }
+        }
+        .logo-glow { animation: glow 3s ease-in-out infinite; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-[#020617] min-h-screen flex items-center justify-center font-sans p-8 text-white">
+
+    <div class="max-w-md w-full text-center">
+        <!-- Showcase do Logo 3.0 -->
+        <div class="relative inline-block p-10 rounded-[2.5rem] bg-gradient-to-br from-[#1e293b] to-[#0f172a] shadow-2xl border border-white/5 mb-8">
+            <div class="absolute inset-0 bg-cyan-500/5 rounded-[2.5rem] blur-xl"></div>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 512 512" class="logo-glow relative z-10">
+                <defs>
+                    <linearGradient id="barGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Fundo -->
+                <rect width="512" height="512" rx="120" fill="#0f172a"/>
+                
+                <!-- Barras com Gradiente e Cantos Arredondados -->
+                <rect x="144" y="208" width="48" height="160" rx="8" fill="url(#barGradient)" />
+                <rect x="232" y="96" width="48" height="272" rx="8" fill="url(#barGradient)" />
+                <rect x="320" y="272" width="48" height="96" rx="8" fill="url(#barGradient)" />
+                
+                <!-- Linha de Base -->
+                <path d="M80 416h352" stroke="#22d3ee" stroke-width="24" stroke-linecap="round" opacity="0.6"/>
+                
+                <!-- Badge 3.0 -->
+                <g transform="translate(340, 80)">
+                    <rect width="100" height="40" rx="20" fill="#22d3ee"/>
+                    <text x="50" y="28" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#0f172a" text-anchor="middle">3.0</text>
+                </g>
+            </svg>
+        </div>
+
+        <h1 class="text-4xl font-black tracking-tighter mb-2 italic">TRADE<span class="text-cyan-400">PRO</span></h1>
+    </div>
+
+</body>
+</html>
